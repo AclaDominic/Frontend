@@ -13,7 +13,7 @@ function TaskCreation({ refreshTasks }) {
         };
 
         try {
-            const response = await fetch("http://localhost:8000/api/tasks", {
+            const response = await fetch("https://taskproject-ype1.onrender.com/api/tasks", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -54,4 +54,4 @@ function TaskCreation({ refreshTasks }) {
     );
 }
 
-export default TaskCreation; // ✅ Default export (fixes "Module Not Found" error)
+export default TaskCreation; 

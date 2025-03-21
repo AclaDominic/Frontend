@@ -5,7 +5,7 @@ function TaskList() {
     const [tasks, setTasks] = useState([]);
 
     const fetchTasks = () => {
-        fetch("http://localhost:8000/api/tasks")
+        fetch("https://taskproject-ype1.onrender.com/api/tasks")
             .then((response) => response.json())
             .then((data) => setTasks(data))
             .catch((error) => console.error("Error fetching tasks:", error));
@@ -16,7 +16,7 @@ function TaskList() {
     }, []);
 
     const completeTask = (id) => {
-        fetch(`http://localhost:8000/api/tasks/${id}/complete`, {
+        fetch(`https://taskproject-ype1.onrender.com/api/tasks/${id}/complete`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
